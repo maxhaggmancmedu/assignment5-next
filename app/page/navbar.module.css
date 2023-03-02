@@ -1,0 +1,26 @@
+.navbar {
+    align-items: center;
+    
+    display: flex;
+    font-size: 3rem;
+    gap: 24px;
+    height: 96px;
+    justify-content: center;
+    color: #000000;
+    text-decoration: none;
+}
+
+.navItem {
+    color: #000000;
+    text-decoration: none;
+}
+
+.active {
+    background-color: white;
+    color: #000000;
+    text-decoration: none;
+}
+
+.nonActive {
+    color: blueviolet;
+}
