@@ -4,6 +4,7 @@ import Link from "next/link"
 import styles from './navbar.module.css'
 import pageStyles from './page.module.css'
 import { useRouter } from 'next/navigation';
+import StickmanHead from "../stickman/stickman-head";
 
 export default function Nav({ children }) {
     const router = useRouter();
@@ -14,6 +15,9 @@ export default function Nav({ children }) {
     return (
         <div className={pageStyles.main}>
             <nav className={styles.navbar}>
+                <Link className={`${styles.navItem} `} href='/'>
+                    <StickmanHead className={styles.stickmanHead} />
+                </Link>
                 <Link className={`${styles.navItem} ${currentRoute === '/' ? styles.active : styles.nonActive}`} href='/'>Home</Link>
                 <Link className={`${styles.navItem} ${currentRoute === '/page/about' ? styles.active : styles.nonActive}`} href='/page/about'>About</Link>
                 <Link className={`${styles.navItem} ${currentRoute === '/page/portfolio' ? styles.active : styles.nonActive}`} href='/page/portfolio'>Portfolio</Link>

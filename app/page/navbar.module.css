@@ -15,12 +15,16 @@
     text-decoration: none;
 }
 
+.stickmanHead {
+    background-color: red;
+}
+
 .active {
     background-color: white;
-    color: #000000;
+    
     text-decoration: none;
 }
 
 .nonActive {
-    color: blueviolet;
+    
 }

@@ -15,6 +15,10 @@
     font-size: 5rem;
 }
 
+.buttonLink {
+    z-index: 10;
+}
+
 .button {
     background-color: #1a4883;
     border: 0;
@@ -29,9 +33,28 @@
     
 }
 
-.button:hover {
-    opacity: .7;
+.stickman {
+    animation: slide 3s forwards;
+    animation-delay: 1s;
+    left: 10%;
+    position: absolute;
+    top: 50px;
+    
 }
+
+@keyframes slide {
+    0% {
+      left: 10%;
+      
+      top: 50px;
+    }
+    100% {
+        left: 43%;
+        top: 480px;
+    }
+  }
+
+
 
 .intro {
     color: #030911;
