@@ -3,24 +3,50 @@
 import Link from "next/link"
 import styles from './navbar.module.css'
 import pageStyles from './page.module.css'
-import { useRouter } from 'next/navigation';
-import StickmanHead from "../stickman/stickman-head";
+import { usePathname } from 'next/navigation';
+import StickmanHead from "./stickmanhead/stickman-head";
+import { animate, motion } from "framer-motion";
 
 export default function Nav({ children }) {
-    const router = useRouter();
-    const currentRoute = router.pathname;
-
+    const currentRoute = usePathname();
+    
     console.log(currentRoute);
+
+    let clicks = 0;
+
+    const handleClick = () => {
+        
+      
+      clicks++
+      window.setTimeout(() => {
+        if (clicks === 1) {
+          
+          console.log('1 click')
+        } else {
+          
+          console.log('dbl click')
+        }
+      }, 500);
+
+    }
 
     return (
         <div className={pageStyles.main}>
             <nav className={styles.navbar}>
-                <Link className={`${styles.navItem} `} href='/'>
-                    <StickmanHead className={styles.stickmanHead} />
+              <motion.div initial={{y: -500}} animate={{y: 0}} transition={{duration: 2, type: 'spring', stiffness:100}}>
+                  <Link onClick={() => handleClick()} className={`${styles.navItem} `} href='/'>
+                    <StickmanHead />
                 </Link>
-                <Link className={`${styles.navItem} ${currentRoute === '/' ? styles.active : styles.nonActive}`} href='/'>Home</Link>
-                <Link className={`${styles.navItem} ${currentRoute === '/page/about' ? styles.active : styles.nonActive}`} href='/page/about'>About</Link>
-                <Link className={`${styles.navItem} ${currentRoute === '/page/portfolio' ? styles.active : styles.nonActive}`} href='/page/portfolio'>Portfolio</Link>
+              </motion.div>
+              <motion.div initial={{y: -500}} animate={{y: 0}} transition={{delay: .2, duration: 2, type: 'spring', stiffness:100}}>
+                <Link className={`${styles.navItem} ${currentRoute === '/page' ? styles.active : ''}`} href='/page'>Home</Link>
+              </motion.div>
+              <motion.div initial={{y: -500}} animate={{y: 0}} transition={{delay: .4, duration: 2, type: 'spring', stiffness:100}}>
+                <Link className={`${styles.navItem} ${currentRoute === '/page/about' ? styles.active : ''}`} href='/page/about'>About</Link>
+              </motion.div>  
+              <motion.div initial={{y: -500}} animate={{y: 0}} transition={{delay: .6, duration: 2, type: 'spring', stiffness:100}}>
+                <Link className={`${styles.navItem} ${currentRoute === '/page/portfolio' ? styles.active : ''}`} href='/page/portfolio'>Portfolio</Link>
+              </motion.div>
             </nav>
             {children}
         </div>

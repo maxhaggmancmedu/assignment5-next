@@ -1,7 +1,8 @@
+"use client"
 import { formatDistanceToNow } from 'date-fns'
 import styles from './page.module.css'
-import Stickman from '../../stickman/stickman.js';
-
+import Stickman from './stickman/stickman';
+import { motion } from 'framer-motion';
 
 
 const timeSinceBeginStudy = formatDistanceToNow(
@@ -17,16 +18,16 @@ export const metadata = {
 
 export default function About() {
     return (
-        <div>
+        <div className={styles.container}>
             <h1 className={styles.h1}>About me</h1>
             <div className={styles.mainContent}>
                 <section className={styles.sectionAboutMe}>
-                    <div className={styles.aboutMe}>My name is Max</div>
+                    <motion.div transition={{duration: 1}} initial={{scale: 0}} animate={{scale: 1 }}  className={styles.aboutMe}>My name is Max</motion.div>
                     <div className={styles.experience}>
-                        <p>I have studied front-end development for <span className={styles.timeStudied}>{timeSinceBeginStudy}</span></p>
+                        <motion.p animate={{x: 0}} initial={{x: -1000}} transition={{duration: 1.5}}>I have studied front-end development for <span className={styles.timeStudied}>{timeSinceBeginStudy}</span></motion.p>
                         <div>
-                            <p>I am comfortable with html, css, vanilla JS and jquery!</p>
-                            <p>I am currently learning different JS framworks such as react and next.js!</p>
+                            <motion.p animate={{x: 0}} initial={{x: -1000}} transition={{duration: 1.5, delay: .5}}>I am comfortable with html, css, vanilla JS and jquery!</motion.p>
+                            <motion.p animate={{x: 0}} initial={{x: -1000}} transition={{duration: 1.5, delay: 1}}>I am currently learning different JS framworks such as react and next.js!</motion.p>
                         </div>
                     </div>
                 </section>

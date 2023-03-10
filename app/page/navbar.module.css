@@ -1,12 +1,11 @@
 .navbar {
     align-items: center;
-    
     display: flex;
-    font-size: 3rem;
+    color: #000000;
+    font-size: 4rem;
     gap: 24px;
     height: 96px;
     justify-content: center;
-    color: #000000;
     text-decoration: none;
 }
 
@@ -20,11 +19,12 @@
 }
 
 .active {
-    background-color: white;
-    
-    text-decoration: none;
+    color: #a3eaf3;
 }
 
-.nonActive {
-    
-}
+@media screen and (max-width: 700px) {
+    .navItem {
+        font-size: 2rem;
+    }
+
+  }

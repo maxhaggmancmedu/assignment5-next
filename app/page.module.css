@@ -1,18 +1,18 @@
 .main {
-    align-items: center;
-    display: flex;
-    gap: 24px;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
     background: rgb(2,0,36);
     background: linear-gradient(166deg, rgba(2,0,36,1) 0%, rgba(26,26,40,1) 22%, rgba(0,212,255,1) 100%);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: 100%;
+    justify-content: center;
 }
 
 .myName {
     color: yellow;
     font-family: reey-regular;
-    font-size: 5rem;
+    font-size: 7rem;
 }
 
 .buttonLink {
@@ -30,23 +30,20 @@
     padding: 1rem 2rem;
     text-decoration: none;
     transition-duration: .3s;
-    
 }
 
 .stickman {
-    animation: slide 3s forwards;
+    animation: slide 2s forwards;
     animation-delay: 1s;
     left: 10%;
     position: absolute;
-    top: 50px;
-    
+    top: -500px;
 }
 
 @keyframes slide {
     0% {
       left: 10%;
-      
-      top: 50px;
+      top: -500px;
     }
     100% {
         left: 43%;
@@ -54,9 +51,50 @@
     }
   }
 
-
-
 .intro {
     color: #030911;
     font-size: 3rem;
+}
+
+@media screen and (max-width: 1231px) {
+    @keyframes slide {
+        0% {
+          left: 10%;
+          top: 50px;
+        }
+        100% {
+            left: 35%;
+            top: 480px;
+        }
+      }
+
+      .intro {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .myName {
+        font-size: 2.5rem;
+    }
+
+    @keyframes slide {
+        0% {
+          left: 10%;
+          top: 50px;
+        }
+        100% {
+            left: 25%;
+            top: 428px;
+        }
+      }
+
+      .intro {
+        font-size: 1.5rem;
+        height: fit-content;
+        margin: auto;
+        text-align: center;
+        width: 60%;
+    }
 }

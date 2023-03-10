@@ -1,7 +1,7 @@
 import styles from './page.module.css'
 import Link from 'next/link'
 import './typography.css'
-import StickmanHead from './stickman/stickman-head'
+import StickmanHead from './stickman-head-first-page/stickman-head'
 
 export default function Home() {
     return (

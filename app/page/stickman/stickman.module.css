@@ -1,47 +1,42 @@
 .stickman {
-    width: 300px;
-    height: 300px;
     display: block;
+    height: 400px;
+    left: 38%;
     position: relative;
-  }
+    width: 300px;
+}
   
-  .head {
-    width: 50px;
-    height: 60px;
+.head {
     border: 5px solid black;
     border-radius: 50%;
     display: block;
-    position: absolute;
+    height: calc(60px * 1.3);
+    left: 131px;
+    position: relative;
     top: 21px;
-    left: 133px;
-    z-index: 1;
-    
     transform-origin: center bottom;
-  }
+    width: calc(50px * 1.3);
+    z-index: 1;
+}
 
-  .lefteye,
-  .righteye {
+.lefteye,
+.righteye {
     background-color: #000000;
     border-radius: 50%;
-    height: 1rem;
-    
-    
-    top: 14px;
-    width: 1rem;
-  }
+    height: 1.4rem;
+    top: 18px;
+    width: 1.4rem;
+}
 
-  .lefteye {
-    
-    left: 6px;
+.lefteye {
+    left: 10px;
     position: relative;
-    
-  }
+}
 
-  .righteye {
-    
-    left: 24px;
+.righteye {
+    left: 29px;
     position: absolute;
-  }
+}
   
   @keyframes rock {
     0% {
@@ -53,49 +48,49 @@
   }
   
   .torso {
-    width: 6px;
-    height: 100px;
-    border: 3px solid black;
+    border: 4px solid black;
     display: block;
+    height: 130px;
+    left: 161px;
     position: absolute;
-    top: 80px;
-    left: 156px;
+    top: 94px;
+    width: 6px;
   }
   
   .leftleg {
-    width: 6px;
-    height: 100px;
-    border: 3px solid black;
+    border: 4px solid black;
     display: block;
+    height: 130px;
+    left: 161px;
     position: absolute;
-    top: 175px;
-    left: 155px;
+    top: 217px;
     transform: rotate(12deg);
     transform-origin: top;
+    width: 6px;
   }
   
   .rightleg {
-    width: 6px;
-    height: 100px;
-    border: 3px solid black;
+    border: 4px solid black;
     display: block;
+    height: 130px;
+    left: 161px;
     position: absolute;
-    top: 175px;
-    left: 157px;
+    top: 217px;
     transform: rotate(-12deg);
     transform-origin: top;
+    width: 6px;
   }
   
   .leftarm {
-    width: 100px;
-    height: 6px;
-    border: 3px solid black;
+    border: 4px solid black;
     display: block;
+    height: 6px;
+    left: 33px;
     position: absolute;
-    top: 88px;
-    left: 57px;
-    animation: wave 1s alternate infinite ease-in-out;
+    top: 116px;
+    transform: rotate(-60deg);
     transform-origin: 100%;
+    width: 130px;
   }
 
   .lefthand,
@@ -105,9 +100,9 @@
     height: 2rem;
     position: relative;
     top: -10px;
+    transform-origin: 100%;
     width: 2rem;
     z-index: 10;
-    transform-origin: 100%;
   }
 
   .lefthand {
@@ -115,18 +110,9 @@
   }
 
   .righthand {
-    left: 80px;
+    left: 112px;
   }
   
-  @keyframes wave {
-    0% {
-      transform: rotate(-20deg);
-    }
-    100% {
-      transform: rotate(40deg);
-    }
-  }
-
   @keyframes waveHand {
     0% {
       transform: rotate(-80deg);
@@ -136,23 +122,18 @@
     }
   }
 
-  
-  
   .rightarm {
-    width: 100px;
-    height: 6px;
-    border: 3px solid black;
+    border: 4px solid black;
     display: block;
+    height: 6px;
+    left: 162px;
     position: absolute;
-    top: 86px;
-    left: 160px;
-    
+    top: 120px;
     transform-origin: 0%;
-    transform: rotate(60deg);
+    transform: rotate(-50deg);
+    width: 130px;
   }
 
-  
-  
   @keyframes wave2 {
     0% {
       transform: rotate(20deg);
@@ -163,23 +144,31 @@
   }
   
   .leftfoot {
-    width: 30px;
-    height: 6px;
-    border: 3px solid black;
+    border: 4px solid black;
     display: block;
-    position: absolute;
-    top: 270px;
+    height: 6px;
     left: 110px;
+    position: absolute;
+    top: 336px;
     transform: rotate(8deg);
+    width: 30px;
   }
   
   .rightfoot {
-    width: 30px;
-    height: 6px;
-    border: 3px solid black;
+    border: 4px solid black;
     display: block;
+    height: 6px;
+    left: 187px;
     position: absolute;
-    top: 270px;
-    left: 178px;
+    top: 336px;
     transform: rotate(-8deg);
+    width: 30px;
+  }
+
+  @media screen and (max-width: 530px) {
+    .stickman {
+      left: 18%;
+      position: relative;
+    }
+
   }

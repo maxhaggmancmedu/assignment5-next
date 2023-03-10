@@ -1,3 +1,10 @@
+.container {
+    margin: auto;
+    max-width: 1400px;
+    overflow: hidden;
+    padding: 48px;
+}
+
 .h1 {
     font-size: 4rem;
     text-align: center;
@@ -8,7 +15,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: auto;
+    margin-left: 48px;
+    margin-right: 48px;
     margin-top: 48px;
+    max-width: 1400px;
 }
 
 .sectionAboutMe {
@@ -23,10 +34,32 @@
 }
 
 .experience {
-    font-size: 2rem;
-    
+    font-size: 2.5rem;
+    line-height: 2;
 }
 
 .timeStudied {
-    font-weight: bold;
+    color: #a3eaf3;
+}
+
+.changedBG {
+    background-color: red;
+}
+
+@media screen and (max-width: 1264px) {
+    .mainContent {
+        gap: 48px;
+        
+    }
+
+    .experience {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .experience {
+        font-size: 1.5rem;
+        text-align: left;
+    }
 }

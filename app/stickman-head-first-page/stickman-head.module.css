@@ -1,0 +1,41 @@
+.head {
+  
+    width: 50px;
+    height: 60px;
+    border: 5px solid black;
+    border-radius: 50%;
+    display: block;
+    
+    top: 175px;
+    left: 133px;
+    position: relative;
+    z-index: 1;
+    transform-origin: center bottom;
+  }
+
+  .lefteye,
+  .righteye {
+    background-color: #000000;
+    border-radius: 50%;
+    height: 1rem;
+    top: 14px;
+    width: 1rem;
+  }
+
+  .lefteye {
+    left: 6px;
+    position: relative;
+    
+  }
+
+  .righteye {
+    left: 24px;
+    position: relative;
+    top: 4px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .head {
+      top: 136px;
+    }
+  }

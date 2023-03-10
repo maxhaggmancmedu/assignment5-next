@@ -1,20 +1,19 @@
 .main {
     display: flex;
     gap: 4rem;
-    height: 100%;
-    justify-content: center;
+    flex: 1 1 auto;
     flex-wrap: wrap;
-    
+    justify-content: center;
+    margin: 48px auto;
+    max-width: 1400px;
+    padding: 0 48px 48px 48px;
 }
 
 .assignmentContainer {
     display: flex;
+    height: fit-content;
     justify-content: center;
     position: relative;
-}
-
-.thumbnail {
-    
 }
 
 .assignmentContent {
@@ -32,9 +31,9 @@
 }
 
 .thumbnail {
-    height:  300px;
     filter: drop-shadow(2px 2px 2px red) invert(45%);
-    width: 500px;
+    height: calc(300px * 1.25);
+    width: calc(500px * 1.25);
 }
 
 .name, 
@@ -43,23 +42,42 @@
     align-items: center;
     color: #FFFFFF;
     display: flex;
-    font-size: 1.3rem;
-    height: fit-content;
+    font-size: 1.6rem;
     justify-content: center;
-    
+    margin: auto;
 }
 
 .name {
     color: rgba(0,212,255,1);
-    font-size: 3rem;
+    font-size: 4rem;
     grid-area: name;
 }
 
-.repLink {
+.repoLink {
     grid-area: repolink;
 }
 
-.sitLink {
+.siteLink {
     grid-area: sitelink;
+}
+
+.siteLink:nth-of-type(1) {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .thumbnail {
+        height: calc(300px / 1.4);
+        width: calc(500px / 1.4);
+    }
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .repoLink, 
+    .siteLink {
+        font-size: 1.3rem;
+    }
 }
 
