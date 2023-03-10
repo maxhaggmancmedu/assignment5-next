@@ -1,22 +1,21 @@
 .stickman {
-    width: 300px;
     height: 300px;
     display: block;
     position: relative;
+    width: 300px;
   }
   
   .head {
-    width: 50px;
-    height: 60px;
     border: 5px solid black;
     border-radius: 50%;
     display: block;
+    height: 60px;
+    left: 133px;
     position: absolute;
     top: 21px;
-    left: 133px;
-    z-index: 1;
-    
     transform-origin: center bottom;
+    width: 50px;
+    z-index: 1;
   }
 
   .lefteye,
@@ -48,49 +47,49 @@
   }
   
   .torso {
-    width: 6px;
-    height: 100px;
     border: 4px solid black;
     display: block;
+    height: 100px;
+    left: 156px;
     position: absolute;
     top: 80px;
-    left: 156px;
+    width: 6px;
   }
   
   .leftleg {
-    width: 6px;
-    height: 100px;
     border: 4px solid black;
     display: block;
+    height: 100px;
+    left: 155px;
     position: absolute;
     top: 175px;
-    left: 155px;
     transform: rotate(12deg);
     transform-origin: top;
+    width: 6px;
   }
   
   .rightleg {
-    width: 6px;
-    height: 100px;
     border: 4px solid black;
     display: block;
+    left: 157px;
+    height: 100px;
     position: absolute;
     top: 175px;
-    left: 157px;
     transform: rotate(-12deg);
     transform-origin: top;
+    width: 6px;
   }
   
   .leftarm {
-    width: 100px;
-    height: 6px;
+    animation: wave 1s alternate infinite ease-in-out;
     border: 4px solid black;
     display: block;
+    height: 6px;
+    left: 57px;
     position: absolute;
     top: 88px;
-    left: 57px;
-    animation: wave 1s alternate infinite ease-in-out;
     transform-origin: 100%;
+    width: 100px;
   }
 
   .lefthand,
@@ -100,9 +99,9 @@
     height: 2rem;
     position: relative;
     top: -10px;
+    transform-origin: 100%;
     width: 2rem;
     z-index: 10;
-    transform-origin: 100%;
   }
 
   .lefthand {
@@ -131,23 +130,18 @@
     }
   }
 
-  
-  
   .rightarm {
-    width: 100px;
-    height: 6px;
     border: 4px solid black;
     display: block;
+    height: 6px;
+    left: 160px;
     position: absolute;
     top: 86px;
-    left: 160px;
-    
     transform-origin: 0%;
     transform: rotate(60deg);
+    width: 100px;
   }
 
-  
-  
   @keyframes wave2 {
     0% {
       transform: rotate(20deg);
@@ -158,23 +152,23 @@
   }
   
   .leftfoot {
-    width: 30px;
-    height: 6px;
     border: 4px solid black;
     display: block;
+    height: 6px;
+    left: 110px;
     position: absolute;
     top: 270px;
-    left: 110px;
     transform: rotate(8deg);
+    width: 30px;
   }
   
   .rightfoot {
-    width: 30px;
-    height: 6px;
     border: 4px solid black;
     display: block;
+    height: 6px;
+    left: 178px;
     position: absolute;
     top: 270px;
-    left: 178px;
     transform: rotate(-8deg);
+    width: 30px;
   }
