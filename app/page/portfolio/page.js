@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link'
 import Image from 'next/image'
 import styles from './page.module.css'
@@ -5,11 +6,15 @@ import assignment1thumb from '../../../public/assignment1-thumbnail.png'
 import assignment2thumb from '../../../public/assignment2-thumbnail.png'
 import assignment3thumb from '../../../public/assignment3-thumbnail.png'
 import assignment4thumb from '../../../public/assignment4-thumbnail.png'
+import { motion } from 'framer-motion'
 
+// Using 'use client' and 'export const metadata' together is unfortunately not allowed
 
+/*
 export const metadata = {
     title: 'Portfolio',
   }
+*/
 
 export default function Portfolio() {
 
@@ -32,8 +37,13 @@ export default function Portfolio() {
                         <Image src={assignment.thumb.img} alt={assignment.thumb.alt} className={styles.thumbnail}></Image>
                         <div className={styles.assignmentContent}>
                             <h3 className={styles.name}>{assignment.projectName}</h3>
-                            <Link className={styles.repoLink} href={assignment.repoLink}>Github repo</Link>
-                            <Link className={styles.siteLink} href={assignment.siteLink}>Website</Link>
+                            <motion.div className={styles.contentWrapper} whileHover={{scale: 1.1}}>
+                                <Link className={styles.repoLink} href={assignment.repoLink}>Github repo</Link>
+                            </motion.div>
+                            <motion.div className={styles.contentWrapper} whileHover={{scale: 1.1}}>
+                                <Link className={styles.siteLink} href={assignment.siteLink}>Website</Link>
+                            </motion.div>
+                            
                         </div>
                         
                     </div>

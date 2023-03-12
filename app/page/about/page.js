@@ -4,17 +4,17 @@ import styles from './page.module.css'
 import Stickman from './stickman/stickman';
 import { motion } from 'framer-motion';
 
-
 const timeSinceBeginStudy = formatDistanceToNow(
     new Date(2022, 9, 1)
   )
 
-  console.log(timeSinceBeginStudy);
+// Using 'use client' and 'export const metadata' together is unfortunately not allowed
 
-
+/*
 export const metadata = {
     title: 'About',
   }
+*/
 
 export default function About() {
     return (
@@ -33,8 +33,6 @@ export default function About() {
                 </section>
                 <Stickman />
             </div>
-            
-            
         </div>
     )
 }
