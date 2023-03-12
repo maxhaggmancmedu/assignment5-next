@@ -26,6 +26,5 @@ export default function() {
             <div className={styles.rightleg}></div>
             <div className={styles.rightfoot}></div>
         </motion.div>
-    )
-    
+    )  
 }

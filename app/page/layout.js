@@ -10,26 +10,6 @@ import { animate, motion } from "framer-motion";
 export default function Nav({ children }) {
     const currentRoute = usePathname();
     
-    console.log(currentRoute);
-
-    let clicks = 0;
-
-    const handleClick = () => {
-        
-      
-      clicks++
-      window.setTimeout(() => {
-        if (clicks === 1) {
-          
-          console.log('1 click')
-        } else {
-          
-          console.log('dbl click')
-        }
-      }, 500);
-
-    }
-
     return (
         <div className={pageStyles.main}>
             <nav className={styles.navbar}>
@@ -49,10 +29,7 @@ export default function Nav({ children }) {
               </motion.div>
             </nav>
             {children}
-        </div>
-            
-        
-        
+        </div> 
     )
 }
 

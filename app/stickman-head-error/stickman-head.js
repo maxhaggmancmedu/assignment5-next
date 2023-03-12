@@ -1,6 +1,5 @@
 import styles from './stickman-head.module.css'
 
-
 export default function() {
     return (
             <div className={`${styles.head} `}>
@@ -8,6 +7,5 @@ export default function() {
                 <div className={styles.righteye}></div>
             </div>   
     )
-    
 }
 

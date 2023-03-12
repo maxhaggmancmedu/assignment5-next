@@ -17,7 +17,6 @@ export const metadata = {
 */
 
 export default function Portfolio() {
-
     const assignments = [
         {projectName: 'Assignment 1', repoLink: 'https://github.com/maxhaggmancmedu/assignment-1-react', siteLink: './page/portfolio', thumb: {img: assignment1thumb, alt: 'Assignment 1 thumbnail'}}, 
         {projectName: 'Assignment 2', repoLink: 'https://github.com/maxhaggmancmedu/assignment-2-react', siteLink: './page/portfolio', thumb: {img: assignment2thumb, alt: 'Assignment 2 thumbnail'}}, 
@@ -26,11 +25,8 @@ export default function Portfolio() {
         /*{projectName: 'Assignment 5', repoLink: 'https://github.com/maxhaggmancmedu/Assignment-4-react', siteLink: 'https://assignment-3-react.vercel.app/', thumb: assignment5thumb}*/
     ]
 
-    
-
     return (
         <main className={styles.main}>
-            
             {assignments.map((assignment) => {
                 return (
                     <div key={assignment.projectName} className={styles.assignmentContainer}>
@@ -43,12 +39,9 @@ export default function Portfolio() {
                             <motion.div className={styles.contentWrapper} whileHover={{scale: 1.1}}>
                                 <Link className={styles.siteLink} href={assignment.siteLink}>Website</Link>
                             </motion.div>
-                            
                         </div>
-                        
                     </div>
-                )
-                
+                ) 
             })}
         </main>
     )

@@ -8,6 +8,5 @@ export default function() {
                 <div className={styles.righteye}></div>
             </div>   
     )
-    
 }
 
