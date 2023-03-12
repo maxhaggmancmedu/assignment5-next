@@ -65,10 +65,6 @@
     grid-area: sitelink;
 }
 
-.siteLink:nth-of-type(1) {
-    display: none;
-}
-
 @media screen and (max-width: 800px) {
     .thumbnail {
         height: calc(300px / 1.4);
