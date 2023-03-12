@@ -32,42 +32,12 @@
     transition-duration: .3s;
 }
 
-.stickman {
-    animation: slide 2s forwards;
-    animation-delay: 1s;
-    left: 10%;
-    position: absolute;
-    top: -500px;
-}
-
-@keyframes slide {
-    0% {
-      left: 10%;
-      top: -500px;
-    }
-    100% {
-        left: 43%;
-        top: 480px;
-    }
-  }
-
 .intro {
     color: #030911;
     font-size: 3rem;
 }
 
 @media screen and (max-width: 1231px) {
-    @keyframes slide {
-        0% {
-          left: 10%;
-          top: 50px;
-        }
-        100% {
-            left: 35%;
-            top: 480px;
-        }
-      }
-
       .intro {
         font-size: 2rem;
     }
@@ -78,18 +48,7 @@
         font-size: 2.5rem;
     }
 
-    @keyframes slide {
-        0% {
-          left: 10%;
-          top: 50px;
-        }
-        100% {
-            left: 25%;
-            top: 428px;
-        }
-      }
-
-      .intro {
+    .intro {
         font-size: 1.5rem;
         height: fit-content;
         margin: auto;
